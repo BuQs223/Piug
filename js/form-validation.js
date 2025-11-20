@@ -74,28 +74,28 @@ class FormValidator {
                 case 'name':
                     if (value.length < 2) {
                         isValid = false;
-                        errorMessage = 'Name must be at least 2 characters';
+                        errorMessage = 'Numele trebuie să aibă cel puțin 2 caractere';
                     }
                     break;
 
                 case 'email':
                     if (!this.isValidEmail(value)) {
                         isValid = false;
-                        errorMessage = 'Please enter a valid email address';
+                        errorMessage = 'Adresa de email trebuie să fie validă';
                     }
                     break;
 
                 case 'phone':
                     if (!this.isValidRomanianPhone(value)) {
                         isValid = false;
-                        errorMessage = 'Please enter a valid Romanian phone number (e.g., +40712345678 or 0712345678)';
+                        errorMessage = 'Va rugam introduceti un numar de telefon valid (e.g., +40712345678 or 0712345678)';
                     }
                     break;
 
                 case 'message':
                     if (value.length < 10) {
                         isValid = false;
-                        errorMessage = 'Message must be at least 10 characters';
+                        errorMessage = 'Mesajul trebuie să aibă cel puțin 10 caractere';
                     }
                     break;
             }

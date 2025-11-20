@@ -967,6 +967,8 @@ body.light-mode .footer-section a {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  justify-content: center;
+  /* Center the icons */
 }
 
 .social-link {

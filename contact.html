@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with us. Send us your questions, suggestions, or feedback.">
+    <title>Contact | Timișoara Restaurants</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">🍽️ Timișoara Restaurants</a>
+
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="restaurants.html">Restaurante</a></li>
+                <li><a href="menu.html">Meniu</a></li>
+                <li><a href="about.html">Despre</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle"><i class="fas fa-sun"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="section" style="margin-top: 80px; padding-top: 3rem;">
+        <div class="container">
+            <h1 class="section-title">Contactează-ne</h1>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto;">Ai întrebări sau sugestii? Suntem aici să
+                te ajutăm! Completează formularul de mai jos sau contactează-ne direct.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 1100px; margin: 0 auto;">
+
+                <!-- CONTACT FORM -->
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">Trimite-ne un Mesaj</h2>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nume Complet *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Ex: Ion Popescu"
+                                required>
+                            <div class="form-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="Ex: ion.popescu@example.com" required>
+                            <div class="form-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input"
+                                placeholder="Ex: +40712345678 sau 0712345678" required>
+                            <div class="form-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subiect</label>
+                            <input type="text" id="subject" name="subject" class="form-input"
+                                placeholder="Subiectul mesajului">
+                            <div class="form-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mesaj *</label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Scrie mesajul tău aici..." required></textarea>
+                            <div class="form-error"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Trimite Mesaj
+                        </button>
+
+                        <div class="form-success">
+                            <i class="fas fa-check-circle"></i> <strong>Mulțumim!</strong> Mesajul tău a fost trimis cu
+                            succes. Vă vom răspunde în curând.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- CONTACT INFO -->
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">Informații Contact</h2>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3><i class="fas fa-map-marker-alt" style="color: var(--accent-red);"></i> Adresă</h3>
+                            <p>Piața Unirii nr. 1<br>300085 Timișoara<br>România</p>
+
+                            <h3 style="margin-top: 1.5rem;"><i class="fas fa-phone"
+                                    style="color: var(--accent-red);"></i> Telefon</h3>
+                            <p>
+                                <a href="tel:+40256123456">+40 256 123 456</a><br>
+                                <a href="tel:+40712345678">+40 712 345 678</a>
+                            </p>
+
+                            <h3 style="margin-top: 1.5rem;"><i class="fas fa-envelope"
+                                    style="color: var(--accent-red);"></i> Email</h3>
+                            <p>
+                                <a href="mailto:info@restaurante-timisoara.ro">info@restaurante-timisoara.ro</a><br>
+                                <a href="mailto:contact@restaurante-timisoara.ro">contact@restaurante-timisoara.ro</a>
+                            </p>
+
+                            <h3 style="margin-top: 1.5rem;"><i class="fas fa-clock"
+                                    style="color: var(--accent-red);"></i> Program</h3>
+                            <p>
+                                Luni - Vineri: 09:00 - 18:00<br>
+                                Sâmbătă: 10:00 - 14:00<br>
+                                Duminică: Închis
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h3>Urmărește-ne pe Social Media</h3>
+                        <div class="social-links" style="justify-content: flex-start; margin-top: 1rem;">
+                            <a href="https://facebook.com" class="social-link" target="_blank" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com" class="social-link" target="_blank" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com" class="social-link" target="_blank" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://youtube.com" class="social-link" target="_blank" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://linkedin.com" class="social-link" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP PLACEHOLDER -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title">Locația Noastră</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&h=600&fit=crop"
+                        alt="Piața Unirii Timișoara"
+                        style="width: 100%; height: auto; border-radius: var(--radius-lg);">
+                    <div class="card-body text-center">
+                        <p>Ne găsești în inima Timișoarei, în celebra Piață Unirii</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HELP BUTTON -->
+    <button class="help-button">
+        <i class="fas fa-question"></i>
+    </button>
+
+    <!-- HELP MODAL -->
+    <div class="help-modal">
+        <div class="help-modal-content">
+            <button class="help-modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Ajutor</h2>
+            <h4>Completarea formularului</h4>
+            <p>Toate câmpurile marcate cu * sunt obligatorii.</p>
+
+            <h4>Format telefon</h4>
+            <p>Numărul de telefon trebuie să fie în format românesc: +40712345678 sau 0712345678</p>
+
+            <h4>Răspuns</h4>
+            <p>Vom răspunde mesajului dumneavoastră în maximum 24 de ore.</p>
+        </div>
+    </div>
+
+    <!-- SCROLL BUTTONS -->
+    <div class="scroll-buttons">
+        <button id="scrollUp" class="scroll-btn btn-icon">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button id="scrollDown" class="scroll-btn btn-icon">
+            <i class="fas fa-arrow-down"></i>
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Despre Noi</h3>
+                    <p>Ghidul tău complet pentru cele mai bune restaurante din Timișoara.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-link" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-link" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-link" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com" class="social-link" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Link-uri Rapide</h3>
+                    <a href="index.html">Acasă</a>
+                    <a href="restaurants.html">Restaurante</a>
+                    <a href="menu.html">Meniu</a>
+                    <a href="about.html">Despre</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> info@restaurante-timisoara.ro</p>
+                    <p><i class="fas fa-phone"></i> +40 256 123 456</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Piața Unirii, Timișoara</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Restaurante Timișoara. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1169 @@
+/* ========================================
+   TIMIȘOARA RESTAURANTS - SIMPLIFIED CSS
+   Easy to understand and present!
+   ======================================== */
+
+/* ====================
+   1. FONTS 
+   ==================== */
+/* Import Google Fonts - these make the text look professional */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap');
+
+/* ====================
+   2. BASIC RESET
+   ==================== */
+/* Remove default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling when clicking links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ====================
+   3. BODY STYLES
+   ==================== */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #F1F5F9;
+  /* Light text */
+  background-color: #0F172A;
+  /* Dark blue background */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode - activated by JavaScript */
+body.light-mode {
+  background-color: #FFFFFF;
+  /* White background */
+  color: #1A1A1A;
+  /* Dark text */
+}
+
+/* ====================
+   4. HEADINGS
+   ==================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+}
+
+/* ====================
+   5. PARAGRAPHS & LINKS
+   ==================== */
+p {
+  margin-bottom: 1rem;
+  color: #CBD5E1;
+  /* Slightly muted text */
+}
+
+body.light-mode p {
+  color: #6B7280;
+}
+
+a {
+  color: #CE1126;
+  /* Romanian red */
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: #002B7F;
+  /* Romanian blue */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====================
+   6. NAVIGATION BAR
+   ==================== */
+.navbar {
+  position: fixed;
+  /* Stays at top when scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  /* Appears above other content */
+  background-color: rgba(30, 41, 59, 0.8);
+  /* Semi-transparent dark */
+  backdrop-filter: blur(10px);
+  /* Blur effect */
+  border-bottom: 1px solid #334155;
+  padding: 1rem 0;
+}
+
+body.light-mode .navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #E5E7EB;
+}
+
+/* Container to center navbar content */
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Logo/Brand */
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #CE1126, #FCD116);
+  /* Romanian colors */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Standard property */
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation menu list */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Navigation links */
+.navbar-menu a {
+  color: #F1F5F9;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s;
+}
+
+body.light-mode .navbar-menu a {
+  color: #1A1A1A;
+}
+
+/* Active page link - has underline */
+.navbar-menu a.active {
+  color: #CE1126;
+  background-color: rgba(206, 17, 38, 0.1);
+  border-bottom: 2px solid #CE1126;
+}
+
+/* Hover effect on links */
+.navbar-menu a:hover {
+  background-color: rgba(206, 17, 38, 0.1);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid #334155;
+  color: #F1F5F9;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  transition: all 0.15s;
+}
+
+body.light-mode .theme-toggle {
+  border-color: #E5E7EB;
+  color: #1A1A1A;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+/* Mobile menu button - hidden on desktop */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #F1F5F9;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+body.light-mode .mobile-menu-toggle {
+  color: #1A1A1A;
+}
+
+/* ====================
+   7. CONTAINER
+   ==================== */
+/* Centers content and limits width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section spacing */
+.section {
+  padding: 4rem 0;
+}
+
+/* Section title with underline */
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+/* Decorative line under section titles */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #CE1126, #FCD116);
+  margin: 1rem auto 0;
+  border-radius: 999px;
+}
+
+/* ====================
+   8. HERO SECTION
+   ==================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  /* Full screen height */
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 60px;
+  /* Space for fixed navbar */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  /* Above carousel */
+  max-width: 800px;
+  padding: 0 1.5rem;
+  color: white;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  /* Responsive size */
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  /* Makes text readable */
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ====================
+   9. CAROUSEL (Image Slider)
+   ==================== */
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* Behind hero text */
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Each carousel slide */
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /* Hidden by default */
+  transition: opacity 0.5s;
+}
+
+/* Active slide is visible */
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Fill space without distortion */
+}
+
+/* Dark overlay to make text readable */
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+/* Carousel indicator dots */
+.carousel-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.carousel-control.active {
+  background: white;
+  width: 30px;
+  /* Wider when active */
+  border-radius: 999px;
+}
+
+/* Previous/Next buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  z-index: 3;
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+  left: 2rem;
+}
+
+.carousel-nav.next {
+  right: 2rem;
+}
+
+/* ====================
+   10. BUTTONS
+   ==================== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+
+/* Primary button - gradient background */
+.btn-primary {
+  background: linear-gradient(135deg, #CE1126, #FCD116);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  /* Lift up on hover */
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Secondary button - transparent with border */
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #CE1126;
+}
+
+/* Icon-only button */
+.btn-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(30, 41, 59, 0.8);
+  border: 1px solid #334155;
+  color: #F1F5F9;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .btn-icon {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: #E5E7EB;
+  color: #1A1A1A;
+}
+
+.btn-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #CE1126, #FCD116);
+  color: white;
+  border-color: transparent;
+}
+
+/* ====================
+   11. CARDS
+   ==================== */
+.card {
+  background-color: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: #E5E7EB;
+}
+
+/* Lift card on hover */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+/* Zoom image on hover */
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #F1F5F9;
+}
+
+body.light-mode .card-title {
+  color: #1A1A1A;
+}
+
+.card-text {
+  color: #CBD5E1;
+  margin-bottom: 1rem;
+}
+
+body.light-mode .card-text {
+  color: #6B7280;
+}
+
+/* Tags/badges */
+.card-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background-color: rgba(206, 17, 38, 0.1);
+  color: #CE1126;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ====================
+   12. GRID LAYOUT
+   ==================== */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* 2 columns */
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3 columns */
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 4 columns */
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ====================
+   13. SEARCH BAR
+   ==================== */
+.search-bar {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 2rem;
+  padding-left: 50px;
+  /* Space for icon */
+  font-size: 1.125rem;
+  border: 2px solid #334155;
+  border-radius: 999px;
+  background-color: rgba(30, 41, 59, 0.8);
+  color: #F1F5F9;
+  transition: all 0.15s;
+}
+
+body.light-mode .search-input {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: #E5E7EB;
+  color: #1A1A1A;
+}
+
+/* Highlight border when typing */
+.search-input:focus {
+  outline: none;
+  border-color: #CE1126;
+  box-shadow: 0 0 0 3px rgba(206, 17, 38, 0.1);
+}
+
+/* Search icon */
+.search-icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748B;
+  font-size: 1.125rem;
+}
+
+/* ====================
+   14. TABLES
+   ==================== */
+.table-container {
+  overflow-x: auto;
+  /* Scroll on mobile */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(30, 41, 59, 0.8);
+}
+
+body.light-mode table {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Table header */
+thead {
+  background: linear-gradient(135deg, #CE1126, #FCD116);
+}
+
+thead th {
+  color: white;
+  padding: 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Table rows */
+tbody tr {
+  border-bottom: 1px solid #334155;
+  transition: background-color 0.15s;
+}
+
+body.light-mode tbody tr {
+  border-bottom-color: #E5E7EB;
+}
+
+/* Highlight row on hover */
+tbody tr:hover {
+  background-color: rgba(206, 17, 38, 0.05);
+}
+
+tbody td {
+  padding: 1.5rem;
+  color: #CBD5E1;
+}
+
+body.light-mode tbody td {
+  color: #6B7280;
+}
+
+/* First column bold */
+tbody td:first-child {
+  font-weight: 600;
+  color: #F1F5F9;
+}
+
+body.light-mode tbody td:first-child {
+  color: #1A1A1A;
+}
+
+/* ====================
+   15. FORMS
+   ==================== */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #F1F5F9;
+}
+
+body.light-mode .form-label {
+  color: #1A1A1A;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  border: 2px solid #334155;
+  border-radius: 0.5rem;
+  background-color: rgba(30, 41, 59, 0.8);
+  color: #F1F5F9;
+  transition: all 0.15s;
+}
+
+body.light-mode .form-input,
+body.light-mode .form-textarea {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: #E5E7EB;
+  color: #1A1A1A;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #CE1126;
+  box-shadow: 0 0 0 3px rgba(206, 17, 38, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Error state - red border */
+.form-input.error,
+.form-textarea.error {
+  border-color: #DC2626;
+}
+
+/* Success state - green border */
+.form-input.success,
+.form-textarea.success {
+  border-color: #10B981;
+}
+
+/* Error message */
+.form-error {
+  display: none;
+  color: #DC2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Show error when input has error */
+.form-input.error+.form-error,
+.form-textarea.error+.form-error {
+  display: block;
+}
+
+/* Success message box */
+.form-success {
+  padding: 1.5rem;
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid #10B981;
+  border-radius: 0.5rem;
+  color: #047857;
+  margin-top: 1.5rem;
+  display: none;
+}
+
+.form-success.show {
+  display: block;
+}
+
+/* ====================
+   16. VIDEO EMBED
+   ==================== */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ====================
+   17. SCROLL BUTTONS
+   ==================== */
+.scroll-buttons {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1020;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scroll-btn {
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  /* Hidden by default */
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+/* Show button when needed */
+.scroll-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ====================
+   18. HELP BUTTON
+   ==================== */
+.help-button {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1020;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #CE1126, #FCD116);
+  color: white;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.15s;
+}
+
+.help-button:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+/* Help modal */
+.help-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1040;
+  display: none;
+  /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+/* Show modal */
+.help-modal.show {
+  display: flex;
+}
+
+.help-modal-content {
+  background-color: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 3rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+body.light-mode .help-modal-content {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.help-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #F1F5F9;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+body.light-mode .help-modal-close {
+  color: #1A1A1A;
+}
+
+.help-modal-close:hover {
+  transform: rotate(90deg);
+  color: #CE1126;
+}
+
+/* ====================
+   19. FOOTER
+   ==================== */
+footer {
+  background-color: #1E293B;
+  border-top: 1px solid #334155;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+body.light-mode footer {
+  background-color: #F8F9FA;
+  border-top-color: #E5E7EB;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 1.5rem;
+  color: #F1F5F9;
+}
+
+body.light-mode .footer-section h3 {
+  color: #1A1A1A;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #CBD5E1;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+body.light-mode .footer-section p,
+body.light-mode .footer-section a {
+  color: #6B7280;
+}
+
+/* Social media icons */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(30, 41, 59, 0.8);
+  border: 1px solid #334155;
+  border-radius: 50%;
+  color: #F1F5F9;
+  font-size: 1.125rem;
+  transition: all 0.15s;
+}
+
+body.light-mode .social-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: #E5E7EB;
+  color: #1A1A1A;
+}
+
+.social-link:hover {
+  background: linear-gradient(135deg, #CE1126, #FCD116);
+  color: white;
+  transform: translateY(-3px);
+  border-color: transparent;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #334155;
+  color: #64748B;
+}
+
+body.light-mode .footer-bottom {
+  border-top-color: #E5E7EB;
+}
+
+/* ====================
+   20. RESPONSIVE (Mobile)
+   ==================== */
+/* Tablets and smaller */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+
+  /* Smaller text */
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Mobile menu */
+  .navbar-menu {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    /* Hidden off-screen */
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    transition: left 0.3s;
+  }
+
+  body.light-mode .navbar-menu {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  /* Show menu when active */
+  .navbar-menu.active {
+    left: 0;
+  }
+
+  /* Show mobile menu button */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* Single column grids on mobile */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Smaller hero */
+  .hero {
+    min-height: 500px;
+  }
+
+  /* Smaller carousel buttons */
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-nav.prev {
+    left: 0.5rem;
+  }
+
+  .carousel-nav.next {
+    right: 0.5rem;
+  }
+
+  /* Adjust fixed buttons */
+  .scroll-buttons {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .help-button {
+    left: 1rem;
+    bottom: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Single column footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====================
+   21. UTILITY CLASSES
+   ==================== */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}

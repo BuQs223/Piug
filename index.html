@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Discover the best restaurants in Timișoara. Find authentic Romanian cuisine, fine dining, and cozy bistros in the heart of Banat.">
+  <meta name="keywords" content="Timișoara, restaurants, Romanian cuisine, dining, Banat, food">
+  <title>Restaurante Timișoara - Discover the Best Dining Experiences</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">🍽️ Timișoara Restaurants</a>
+
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="restaurants.html">Restaurante</a></li>
+        <li><a href="menu.html">Meniu</a></li>
+        <li><a href="about.html">Despre</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="theme-toggle"><i class="fas fa-sun"></i></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH CAROUSEL -->
+  <section class="hero">
+    <div class="carousel">
+      <div class="carousel-inner">
+        <!-- Carousel Item 1 -->
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop"
+            alt="Elegant restaurant interior in Timișoara">
+        </div>
+
+        <!-- Carousel Item 2 -->
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop"
+            alt="Traditional Romanian cuisine">
+        </div>
+
+        <!-- Carousel Item 3 -->
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&h=1080&fit=crop"
+            alt="Outdoor dining in Timișoara">
+        </div>
+
+        <!-- Carousel Item 4 -->
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&h=1080&fit=crop"
+            alt="Fine dining experience">
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+
+      <!-- Indicators -->
+      <div class="carousel-controls">
+        <button class="carousel-control active"></button>
+        <button class="carousel-control"></button>
+        <button class="carousel-control"></button>
+        <button class="carousel-control"></button>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <h1>Descoperă Restaurantele din Timișoara</h1>
+      <p>Bucătărie autentică românească, fine dining și experiențe culinare unice</p>
+      <div>
+        <a href="restaurants.html" class="btn btn-primary">Explorează Restaurantele</a>
+        <a href="#featured" class="btn btn-secondary">Vezi Recomandări</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="search-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="homeSearch" class="search-input" placeholder="Caută restaurant, tip de bucătărie...">
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED RESTAURANTS -->
+  <section id="featured" class="section">
+    <div class="container">
+      <h2 class="section-title">Restaurante Recomandate</h2>
+
+      <div id="featuredRestaurants" class="grid grid-3">
+        <!-- Restaurant Card 1 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=600&h=400&fit=crop"
+            alt="Restaurant Casa Bunicii" class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">Casa Bunicii</h3>
+            <p class="card-text">Restaurant tradițional românesc cu preparate autentice din rețete vechi de familie.</p>
+            <div class="card-meta">
+              <span class="badge">Românească</span>
+              <span class="badge">Tradițional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restaurant Card 2 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop" alt="Bistro Urban"
+            class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">Bistro Urban</h3>
+            <p class="card-text">Mâncare modernă, atmosferă relaxată și meniu fusion ce îmbină tradiționalul cu
+              contemporanul.</p>
+            <div class="card-meta">
+              <span class="badge">Fusion</span>
+              <span class="badge">Modern</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restaurant Card 3 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&h=400&fit=crop" alt="La Piazza"
+            class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">La Piazza</h3>
+            <p class="card-text">Autentică bucătărie italiană cu ingrediente proaspete și rețete tradiționale din
+              Italia.</p>
+            <div class="card-meta">
+              <span class="badge">Italiană</span>
+              <span class="badge">Pizza</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restaurant Card 4 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1596040033229-a0b797b3d52e?w=600&h=400&fit=crop"
+            alt="Steak House Premium" class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">Steak House Premium</h3>
+            <p class="card-text">Carne de cea mai înaltă calitate, preparată la perfecțiune de bucătari experimentați.
+            </p>
+            <div class="card-meta">
+              <span class="badge">Grill</span>
+              <span class="badge">Premium</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restaurant Card 5 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop" alt="Sushi Zen"
+            class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">Sushi Zen</h3>
+            <p class="card-text">Restaurant japonez autentic cu sushi fresh și o atmosferă liniștitoare.</p>
+            <div class="card-meta">
+              <span class="badge">Japoneză</span>
+              <span class="badge">Sushi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restaurant Card 6 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&h=400&fit=crop" alt="Garden Terrace"
+            class="card-img">
+          <div class="card-body">
+            <h3 class="card-title">Garden Terrace</h3>
+            <p class="card-text">Experiență culinară în aer liber cu grădină privată și meniu mediteranean.</p>
+            <div class="card-meta">
+              <span class="badge">Mediteraneană</span>
+              <span class="badge">Terasă</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="restaurants.html" class="btn btn-primary">Vezi Toate Restaurantele</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELP BUTTON -->
+  <button class="help-button">
+    <i class="fas fa-question"></i>
+  </button>
+
+  <!-- HELP MODAL -->
+  <div class="help-modal">
+    <div class="help-modal-content">
+      <button class="help-modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>Ajutor</h2>
+      <h4>Cum navighez pe site?</h4>
+      <p>Folosește meniul din partea de sus pentru a accesa diferitele secțiuni ale site-ului.</p>
+
+      <h4>Cum caut un restaurant?</h4>
+      <p>Introduceți numele restaurantului sau tipul de bucătărie în bara de căutare.</p>
+
+      <h4>Cum schimb tema?</h4>
+      <p>Apasă pe butonul cu soare/lună din meniu pentru a comuta între modul luminos și întunecat.</p>
+
+      <h4>Contact</h4>
+      <p>Pentru întrebări sau sugestii, vizitați pagina de <a href="contact.html">Contact</a>.</p>
+    </div>
+  </div>
+
+  <!-- SCROLL BUTTONS -->
+  <div class="scroll-buttons">
+    <button id="scrollUp" class="scroll-btn btn-icon">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <button id="scrollDown" class="scroll-btn btn-icon">
+      <i class="fas fa-arrow-down"></i>
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Despre Noi</h3>
+          <p>Ghidul tău complet pentru cele mai bune restaurante din Timișoara.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-link" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" class="social-link" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" class="social-link" target="_blank" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://youtube.com" class="social-link" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Link-uri Rapide</h3>
+          <a href="index.html">Acasă</a>
+          <a href="restaurants.html">Restaurante</a>
+          <a href="menu.html">Meniu</a>
+          <a href="about.html">Despre</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p><i class="fas fa-envelope"></i> info@restaurante-timisoara.ro</p>
+          <p><i class="fas fa-phone"></i> +40 256 123 456</p>
+          <p><i class="fas fa-map-marker-alt"></i> Piața Unirii, Timișoara</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Restaurante Timișoara. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/search.js"></script>
+</body>
+
+</html>
